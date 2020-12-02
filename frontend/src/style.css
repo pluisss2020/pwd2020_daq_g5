@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: lightblue;
+    text-decoration: unset;
+}
+
+ul {
+    margin-left: 1.5rem;
+    list-style: none;
+
+}
+
+button,
+input[type='submit'] {
+    border: none;
+    background: none;
+    color: unset;
+    cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol {
+    margin: 1em 0;
+}
+
+/* general */
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.page {
+    padding: 1rem;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* header */
+
+#header {
+    display: flex;
+    background-color: black;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+#header .title {
+    margin: 0;
+    padding: 0 1rem;
+    color: white;
+}
+#header .auth-options {
+    height: 100%;
+    display: flex;
+    color: white;
+}
+#header .auth-options button {
+    padding: 0 1rem;
+    background-color: rgb(68, 68, 68);
+}
+
+#header .auth-options button:hover {
+background-color: rgb(100, 100, 100);
+}
+
+/* input */
+
+.form label,
+.form input {
+    display: block;
+}
+
+.form input {
+    margin-bottom: 1rem;
+}
+.form label {
+    margin-bottom: 0.2rem;
+}
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="password"] {
+    width: 100%;
+    padding: 0.3rem;
+    font-size: 1.1rem;
+    border: 1px solid lightslategrey;
+    border-radius: 8px;
+    background-color: rgb(241, 241, 241);
+}
+.form input:focus {
+    border: 1px solid lightskyblue;
+    box-shadow: inset 0px 0px 5px lightskyblue;
+    outline: none;
+}
+.form input[type='submit'] {
+    padding: 0.3rem 0.5rem;
+    border: 1px solid green;
+    border-radius: 8px;
+    background-color: lightgreen;
+    font-size: 1.1rem;
+}
+
+/* error notice */
+
+.error-notice {
+    border: 1px solid red;
+    background-color: rgb(255, 185, 185);
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+.error-notice button {
+    background-color: red;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: white;
+}
+/* success notice */
+
+.success-notice {
+    border: 1px solid green;
+    background-color: rgb(124, 255, 124);
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+.success-notice button {
+    background-color: green;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: white;
+}
+
+/* media query */
+
+@media screen and (max-width: 550px) {
+    #header .title {
+        font-size: 1.2rem;
+    }
+    #header .auth-options button {
+        padding: 0 0.5rem;
+        font-size: 0.9rem;
+    }
+}
